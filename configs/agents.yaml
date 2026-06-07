@@ -1,0 +1,33 @@
+agents:
+  research_agent:
+    name: "Research Agent"
+    description: "Исследует тему, собирает факты и инсайты"
+    prompt: "prompts/researcher.md"
+    model: "claude-opus-4-6"
+    tools:
+      - query_chatgpt
+    max_tokens: 4096
+    verbose: true
+
+  writer_agent:
+    name: "Writer Agent"
+    description: "Создаёт тексты для любых форматов"
+    prompt: "prompts/writer.md"
+    model: "claude-opus-4-6"
+    tools:
+      - query_chatgpt
+      - deploy_to_base44
+    max_tokens: 2048
+    verbose: false
+
+  full_stack_agent:
+    name: "Full Stack Agent"
+    description: "Полный цикл: исследование → текст → веб-деплой"
+    prompt: "prompts/orchestrator.md"
+    model: "claude-opus-4-6"
+    tools:
+      - query_chatgpt
+      - deploy_to_base44
+      - call_antigravity
+    max_tokens: 8096
+    verbose: true

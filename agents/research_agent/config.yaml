@@ -1,0 +1,14 @@
+name: "Research Agent"
+version: "1.0.0"
+description: "Исследует тему с двойной верификацией через Claude + ChatGPT"
+
+model:
+  primary: "claude-opus-4-6"
+  secondary: "gpt-4o"
+
+tools:
+  - query_chatgpt
+
+output:
+  format: "markdown"
+  save_to: "outputs/"

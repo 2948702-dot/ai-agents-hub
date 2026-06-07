@@ -1,0 +1,19 @@
+tools:
+  openai:
+    default_model: "gpt-4o"
+    fallback_model: "gpt-4o-mini"
+    max_tokens: 2048
+    timeout: 30
+
+  base44:
+    api_url: "https://api.base44.com/v1"
+    timeout: 30
+
+  antigravity:
+    api_url: "https://api.antigravity.ai/v1"
+    timeout: 30
+    modules:
+      - analytics
+      - crm
+      - content
+      - data
